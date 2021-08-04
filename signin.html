@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGN IN</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js"></script>
+
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyB9wCQRONs4shvIENwPOWOLUj4-p_w4cjY",
+            authDomain: "authentication-cfd88.firebaseapp.com",
+            projectId: "authentication-cfd88",
+            storageBucket: "authentication-cfd88.appspot.com",
+            messagingSenderId: "524686606432",
+            appId: "1:524686606432:web:0ee2df03da07b3161ec305",
+            measurementId: "G-34GDQ79KPX"
+        };
+        firebase.initializeApp(firebaseConfig);
+    </script>
+</head>
+
+<body>
+    <div class="wrapper fadeInDown">
+        <div id="formContent">
+            <!-- Tabs Titles -->
+            <h2 class="active"> Sign In </h2>
+            <h2 onclick="signUppage()" id="signUp" class="inactive underlineHover">Sign Up</h2>
+
+            <!-- Login Form -->
+            <!-- <form action=""> -->
+            <input type="email" id="email" class="fadeIn second" name="login" placeholder="Enter Your Email" required>
+            <input type="password" id="password" class="fadeIn third" name="login" placeholder="Enter Your Password"
+                required><br>
+
+            <input type="submit" class="fadeIn fourth" value="LOG IN" onclick="signIn()">
+
+            <div class="or">OR</div>
+            <div class="right">
+                <button class="social-signin facebook" onclick="loginfb()">Log in with facebook</button><br>
+                <button class="social-signin google" onclick="logingoogle()">Log in with Google</button>
+            </div>
+            <!-- </form> -->
+
+            <!-- Remind Passowrd -->
+            <!-- <div id="formFooter">
+                <a class="underlineHover" href="./forgot.html">Forgot Password?</a>
+            </div> -->
+
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+
+</html>
